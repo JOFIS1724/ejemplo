@@ -1,0 +1,2855 @@
+ <!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donas del Bosque</title>
+
+
+    <style>
+
+        /* ================================
+           COLORES
+        ================================= */
+
+        :root {
+
+            --verde: #b9cfb1;
+            --verde-oscuro: #60785a;
+            --verde-claro: #edf5e9;
+
+            --rosa: #e9aabd;
+            --rosa-oscuro: #c87591;
+            --rosa-claro: #fcecf1;
+
+            --crema: #fff8ed;
+            --beige: #eadbc8;
+
+            --cafe: #513932;
+            --cafe-claro: #806c63;
+
+            --blanco: #ffffff;
+
+            --sombra:
+                0 12px 35px rgba(81, 57, 50, 0.10);
+
+        }
+
+
+        /* ================================
+           CONFIGURACIÓN GENERAL
+        ================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: var(--crema);
+
+            color: var(--cafe);
+
+            line-height: 1.6;
+
+        }
+
+
+        img {
+
+            width: 100%;
+
+            display: block;
+
+        }
+
+
+        a {
+
+            text-decoration: none;
+
+        }
+
+
+        .contenedor {
+
+            width: min(1180px, 92%);
+
+            margin: auto;
+
+        }
+
+
+        section {
+
+            padding: 85px 0;
+
+        }
+
+
+
+        /* ================================
+           HEADER
+        ================================= */
+
+        header {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(255, 248, 237, 0.96);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom:
+                1px solid #eadfd3;
+
+        }
+
+
+        .nav {
+
+            min-height: 78px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 25px;
+
+        }
+
+
+
+        /* LOGO */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: var(--cafe);
+
+            font-size: 1.35rem;
+
+            font-weight: 900;
+
+        }
+
+
+        /* LOGO */
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: var(--cafe);
+
+            font-size: 1.35rem;
+
+            font-weight: 900;
+
+        }
+
+
+        .logo img {
+
+            width: 48px;
+
+            height: 48px;
+
+            object-fit: contain;
+
+            border-radius: 50%;
+
+        }
+
+
+        .logo span {
+
+            color: var(--rosa-oscuro);
+
+        }
+
+    
+
+
+        .logo span {
+
+            color: var(--rosa-oscuro);
+
+        }
+
+        /* MENU NAV */
+
+        nav {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 25px;
+
+        }
+
+
+        nav a {
+
+            color: var(--cafe);
+
+            font-size: 0.94rem;
+
+            font-weight: 700;
+
+            transition: 0.25s;
+
+        }
+
+
+        nav a:hover {
+
+            color: var(--rosa-oscuro);
+
+        }
+
+
+        .boton-nav {
+
+            background: var(--rosa-oscuro);
+
+            color: white !important;
+
+            padding: 11px 20px;
+
+            border-radius: 25px;
+
+        }
+
+
+
+        /* ================================
+           INICIO
+        ================================= */
+
+        #inicio {
+
+            padding-top: 35px;
+
+            background:
+
+                radial-gradient(
+                    circle at 5% 20%,
+                    var(--verde-claro) 0 12%,
+                    transparent 13%
+                ),
+
+                radial-gradient(
+                    circle at 95% 20%,
+                    var(--rosa-claro) 0 12%,
+                    transparent 13%
+                ),
+
+                var(--crema);
+
+        }
+
+
+        .hero {
+
+            min-height: 570px;
+
+            display: grid;
+
+            grid-template-columns:
+                0.95fr 1.25fr;
+
+            overflow: hidden;
+
+            border-radius: 35px;
+
+            background: var(--verde);
+
+            box-shadow: var(--sombra);
+
+        }
+
+
+        .hero-texto {
+
+            padding: 65px 55px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #b8ceb0,
+                    #d0dfca
+                );
+
+        }
+
+
+        .mini-titulo {
+
+            color: var(--verde-oscuro);
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            font-size: 0.82rem;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .hero h1 {
+
+            font-size:
+                clamp(3rem, 6vw, 5.3rem);
+
+            line-height: 0.95;
+
+            margin-bottom: 25px;
+
+        }
+
+
+        .hero h1 span {
+
+            color: var(--rosa-oscuro);
+
+        }
+
+
+        .hero p {
+
+            max-width: 500px;
+
+            color: #5f514b;
+
+            font-size: 1.08rem;
+
+            margin-bottom: 30px;
+
+        }
+
+
+        .hero-botones {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+        }
+
+
+        .boton {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 14px 24px;
+
+            border-radius: 30px;
+
+            font-weight: 800;
+
+            transition: 0.25s;
+
+        }
+
+
+        .boton:hover {
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .boton-rosa {
+
+            background: var(--rosa-oscuro);
+
+            color: white;
+
+        }
+
+
+        .boton-blanco {
+
+            background: white;
+
+            color: var(--cafe);
+
+        }
+
+
+        .hero-imagen {
+
+            min-height: 570px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: var(--rosa-claro);
+
+        }
+
+
+        .hero-imagen img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+        .hero-etiqueta {
+
+            position: absolute;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            padding: 14px 20px;
+
+            background:
+                rgba(255,255,255,0.92);
+
+            border-radius: 20px;
+
+            box-shadow: var(--sombra);
+
+            font-weight: 800;
+
+        }
+
+
+
+        /* ================================
+           CATEGORÍAS
+        ================================= */
+
+        .categorias {
+
+            padding: 35px 0;
+
+        }
+
+
+        .categorias-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .categoria {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            padding: 27px;
+
+            background: white;
+
+            border-radius: 25px;
+
+            border: 1px solid #eee2d6;
+
+            box-shadow:
+                0 8px 25px
+                rgba(81,57,50,0.06);
+
+            transition: 0.25s;
+
+        }
+
+
+        .categoria:hover {
+
+            transform: translateY(-5px);
+
+        }
+
+
+        .categoria-icono {
+
+            min-width: 65px;
+
+            height: 65px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--rosa-claro);
+
+            border-radius: 20px;
+
+            font-size: 2rem;
+
+        }
+
+
+        .categoria:nth-child(2)
+        .categoria-icono {
+
+            background: var(--verde-claro);
+
+        }
+
+
+        .categoria:nth-child(3)
+        .categoria-icono {
+
+            background: #f8ead8;
+
+        }
+
+
+        .categoria h3 {
+
+            margin-bottom: 4px;
+
+        }
+
+
+        .categoria p {
+
+            color: var(--cafe-claro);
+
+            font-size: 0.88rem;
+
+        }
+
+
+
+        /* ================================
+           ENCABEZADOS
+        ================================= */
+
+        .encabezado {
+
+            margin-bottom: 38px;
+
+        }
+
+
+        .encabezado-centro {
+
+            text-align: center;
+
+        }
+
+
+        .encabezado small {
+
+            color: var(--rosa-oscuro);
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .encabezado h2 {
+
+            font-size:
+                clamp(2.1rem, 4vw, 3.2rem);
+
+            line-height: 1.1;
+
+            margin: 8px 0 10px;
+
+        }
+
+
+        .encabezado p {
+
+            color: var(--cafe-claro);
+
+        }
+
+
+
+        /* ================================
+           MENÚ
+        ================================= */
+
+        #menu {
+
+            background: white;
+
+        }
+
+
+        .productos {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .producto {
+
+            overflow: hidden;
+
+            background: var(--crema);
+
+            border-radius: 25px;
+
+            border:
+                1px solid #eee1d5;
+
+            transition: 0.3s;
+
+        }
+
+
+        .producto:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow: var(--sombra);
+
+        }
+
+
+        .producto-img {
+
+            height: 220px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: var(--rosa-claro);
+
+        }
+
+
+        .producto-img img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.4s;
+
+        }
+
+
+        .producto:hover
+        .producto-img img {
+
+            transform: scale(1.05);
+
+        }
+
+
+        .favorito {
+
+            position: absolute;
+
+            top: 15px;
+
+            right: 15px;
+
+            width: 38px;
+
+            height: 38px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: white;
+
+            border-radius: 50%;
+
+            font-size: 1.1rem;
+
+        }
+
+
+        .producto-info {
+
+            padding: 20px;
+
+        }
+
+
+        .producto-info h3 {
+
+            margin-bottom: 7px;
+
+            font-size: 1.15rem;
+
+        }
+
+
+        .producto-info p {
+
+            min-height: 50px;
+
+            color: var(--cafe-claro);
+
+            font-size: 0.88rem;
+
+        }
+
+
+        .producto-abajo {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            margin-top: 15px;
+
+        }
+
+
+        .precio {
+
+            color: var(--verde-oscuro);
+
+            font-weight: 900;
+
+        }
+
+
+        .etiqueta {
+
+            padding: 8px 13px;
+
+            background: var(--rosa-claro);
+
+            color: var(--rosa-oscuro);
+
+            border-radius: 20px;
+
+            font-size: 0.78rem;
+
+            font-weight: 800;
+
+        }
+
+
+
+        /* ================================
+           SEPARADORES DE MENÚ
+        ================================= */
+
+        .separador {
+
+            height: 75px;
+
+        }
+
+
+
+        /* ================================
+           PROPUESTA
+        ================================= */
+
+        .propuesta {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--rosa-claro),
+                    var(--crema)
+                );
+
+        }
+
+
+        .propuesta-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 45px;
+
+            align-items: center;
+
+        }
+
+
+        .propuesta-imagen {
+
+            height: 480px;
+
+            overflow: hidden;
+
+            border-radius: 35px;
+
+            box-shadow: var(--sombra);
+
+        }
+
+
+        .propuesta-imagen img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+        .propuesta-texto h2 {
+
+            font-size: 3rem;
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .propuesta-texto p {
+
+            color: var(--cafe-claro);
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .promesas {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 15px;
+
+            margin-top: 25px;
+
+        }
+
+
+        .promesa {
+
+            padding: 18px;
+
+            background:
+                rgba(255,255,255,0.75);
+
+            border-radius: 20px;
+
+        }
+
+
+        .promesa strong {
+
+            display: block;
+
+            color: var(--verde-oscuro);
+
+            margin-bottom: 4px;
+
+        }
+
+
+        .promesa span {
+
+            color: var(--cafe-claro);
+
+            font-size: 0.85rem;
+
+        }
+
+
+
+        /* ================================
+           NOSOTROS
+        ================================= */
+
+        #nosotros {
+
+            background: var(--crema);
+
+        }
+
+
+        .nosotros-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .nosotros-card {
+
+            padding: 30px;
+
+            background: white;
+
+            border-radius: 25px;
+
+            border:
+                1px solid #eee2d5;
+
+        }
+
+
+        .icono {
+
+            width: 55px;
+
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-bottom: 18px;
+
+            background: var(--verde-claro);
+
+            border-radius: 18px;
+
+            font-size: 1.5rem;
+
+        }
+
+
+        .nosotros-card:nth-child(2)
+        .icono {
+
+            background: var(--rosa-claro);
+
+        }
+
+
+        .nosotros-card:nth-child(3)
+        .icono {
+
+            background: #f8ead8;
+
+        }
+
+
+        .nosotros-card h3 {
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .nosotros-card p {
+
+            color: var(--cafe-claro);
+
+            font-size: 0.92rem;
+
+        }
+
+
+
+        /* ================================
+           GALERÍA
+        ================================= */
+
+        #galeria {
+
+            background: white;
+
+        }
+
+
+        .galeria {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            grid-auto-rows: 220px;
+
+            gap: 15px;
+
+        }
+
+
+        .galeria-item {
+
+            overflow: hidden;
+
+            border-radius: 25px;
+
+            background: var(--verde-claro);
+
+        }
+
+
+        .galeria-item img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: 0.4s;
+
+        }
+
+
+        .galeria-item:hover img {
+
+            transform: scale(1.06);
+
+        }
+
+
+        .galeria-grande {
+
+            grid-column: span 2;
+
+            grid-row: span 2;
+
+        }
+
+
+
+        /* ================================
+           BANNER
+        ================================= */
+
+        .pedido-banner {
+
+            margin-top: 60px;
+
+            padding: 45px;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    var(--verde-oscuro),
+                    var(--verde)
+                );
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+
+        }
+
+
+        .pedido-banner h2 {
+
+            font-size: 2rem;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .pedido-banner p {
+
+            color: #f5fff2;
+
+        }
+
+
+
+        /* ================================
+           CONTACTO
+        ================================= */
+
+        #contacto {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--verde-claro),
+                    var(--rosa-claro)
+                );
+
+        }
+
+
+        .contacto-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 25px;
+
+        }
+
+
+        .contacto-card {
+
+            padding: 40px;
+
+            background: white;
+
+            border-radius: 30px;
+
+            text-align: center;
+
+            box-shadow:
+                0 10px 30px
+                rgba(81,57,50,0.07);
+
+        }
+
+
+        .contacto-icono {
+
+            width: 70px;
+
+            height: 70px;
+
+            margin: 0 auto 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            background: var(--rosa-claro);
+
+            border-radius: 50%;
+
+            font-size: 2rem;
+
+        }
+
+
+        .contacto-card:nth-child(2)
+        .contacto-icono {
+
+            background: var(--verde-claro);
+
+        }
+
+
+        .contacto-card h3 {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 10px;
+
+        }
+
+
+        .contacto-card p {
+
+            color: var(--cafe-claro);
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .contacto-boton {
+
+            display: inline-block;
+
+            padding: 12px 23px;
+
+            border-radius: 25px;
+
+            background: var(--rosa-oscuro);
+
+            color: white;
+
+            font-weight: 800;
+
+        }
+
+
+        .contacto-card:nth-child(2)
+        .contacto-boton {
+
+            background: var(--verde-oscuro);
+
+        }
+
+
+
+        /* ================================
+           FOOTER
+        ================================= */
+
+        footer {
+
+            padding: 45px 0 25px;
+
+            background: #f5ecdf;
+
+            text-align: center;
+
+        }
+
+
+        .footer-logo {
+
+            font-size: 1.5rem;
+
+            font-weight: 900;
+
+        }
+
+
+        .footer-logo span {
+
+            color: var(--rosa-oscuro);
+
+        }
+
+
+        .footer-linea {
+
+            width: 70px;
+
+            height: 3px;
+
+            margin: 18px auto;
+
+            background: var(--rosa);
+
+            border-radius: 10px;
+
+        }
+
+
+        footer p {
+
+            color: var(--cafe-claro);
+
+            font-size: 0.9rem;
+
+        }
+
+
+
+        /* ================================
+           RESPONSIVE
+        ================================= */
+
+        @media (max-width: 950px) {
+
+            nav {
+
+                gap: 12px;
+
+            }
+
+
+            nav a {
+
+                font-size: 0.83rem;
+
+            }
+
+
+            .hero {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .hero-imagen {
+
+                min-height: 400px;
+
+            }
+
+
+            .productos {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .propuesta-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .nosotros-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+
+            .galeria {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+            }
+
+        }
+
+
+
+        @media (max-width: 650px) {
+
+            section {
+
+                padding: 65px 0;
+
+            }
+
+
+            .nav {
+
+                flex-direction: column;
+
+                padding: 15px 0;
+
+            }
+
+
+            nav {
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+
+            }
+
+
+            .categorias-grid,
+            .productos,
+            .nosotros-grid,
+            .contacto-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .hero-texto {
+
+                padding: 45px 25px;
+
+            }
+
+
+            .hero h1 {
+
+                font-size: 3.2rem;
+
+            }
+
+
+            .hero-imagen {
+
+                min-height: 350px;
+
+            }
+
+
+            .propuesta-imagen {
+
+                height: 350px;
+
+            }
+
+
+            .promesas {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .galeria {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+                grid-auto-rows: 170px;
+
+            }
+
+
+            .galeria-grande {
+
+                grid-column: span 2;
+
+                grid-row: span 2;
+
+            }
+
+
+            .pedido-banner {
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                padding: 30px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header>
+
+        <div class="contenedor nav">
+
+
+            <a href="#inicio" class="logo">
+
+                <img
+                    src="imagenes/logo.png"
+                    alt="Logo Donas del Bosque"
+                >
+
+                <span>
+                    Donas del Bosque
+                </span>
+
+            </a>
+
+
+            <nav>
+
+                <a href="#inicio">
+                    Inicio
+                </a>
+
+                <a href="#menu">
+                    Menú
+                </a>
+
+                <a href="#nosotros">
+                    Nosotros
+                </a>
+
+                <a href="#galeria">
+                    Galería
+                </a>
+
+                <a
+                    href="#contacto"
+                    class="boton-nav"
+                >
+                    Contáctanos
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =========================================
+             INICIO
+        ========================================== -->
+
+        <section id="inicio">
+
+            <div class="contenedor">
+
+                <div class="hero">
+
+
+                    <div class="hero-texto">
+
+                        <div class="mini-titulo">
+                            ✦ DONAS DEL BOSQUE ✦
+                        </div>
+
+
+                        <h1>
+
+                            Un bosque
+                            <span>
+                                lleno de sabor.
+                            </span>
+
+                        </h1>
+
+
+                        <p>
+
+                            Donas suaves cubiertas con
+                            deliciosos chocolates y
+                            toppings para crear una
+                            combinación única en cada
+                            bocado. 🌿🍩
+
+                        </p>
+
+
+                        <div class="hero-botones">
+
+                            <a
+                                href="#menu"
+                                class="boton boton-rosa"
+                            >
+                                Ver nuestro menú
+                            </a>
+
+
+                            <a
+                                href="#contacto"
+                                class="boton boton-blanco"
+                            >
+                                Hacer un pedido
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="hero-imagen">
+
+                        <!-- IMAGEN PRINCIPAL -->
+
+                        <img
+                            src="imagenes/principal.jpg"
+                            alt="Donas del Bosque"
+                        >
+
+
+                        <div class="hero-etiqueta">
+
+                            🍩 Hechas para
+                            endulzar tu día
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CATEGORÍAS
+        ========================================== -->
+
+        <section class="categorias">
+
+            <div class="contenedor">
+
+                <div class="categorias-grid">
+
+
+                    <a
+                        href="#donas"
+                        class="categoria"
+                    >
+
+                        <div class="categoria-icono">
+                            🍩
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Donas
+                            </h3>
+
+                            <p>
+                                Suaves y deliciosas
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <a
+                        href="#chocolates"
+                        class="categoria"
+                    >
+
+                        <div class="categoria-icono">
+                            🍫
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Chocolates
+                            </h3>
+
+                            <p>
+                                Tres sabores
+                            </p>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <a
+                        href="#toppings"
+                        class="categoria"
+                    >
+
+                        <div class="categoria-icono">
+                            ✨
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Toppings
+                            </h3>
+
+                            <p>
+                                El toque final
+                            </p>
+
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             MENÚ
+        ========================================== -->
+
+        <section id="menu">
+
+            <div class="contenedor">
+
+
+                <div class="encabezado">
+
+                    <small>
+                        NUESTROS FAVORITOS
+                    </small>
+
+                    <h2>
+                        Elige tu combinación favorita 🍩
+                    </h2>
+
+                    <p>
+                        Combina tu dona con el chocolate
+                        y topping que más te guste.
+                    </p>
+
+                </div>
+
+
+
+                <!-- DONAS -->
+
+                <div id="donas"></div>
+
+
+                <div class="productos">
+
+
+                    <!-- DONA CLÁSICA -->
+
+                    <article class="producto">
+
+                        <div class="producto-img">
+
+                            <img
+                                src="imagenes/dona clasica.jpg"
+                                alt="Dona clásica"
+                            >
+
+                            <div class="favorito">
+                                ♡
+                            </div>
+
+                        </div>
+
+
+                        <div class="producto-info">
+
+                            <h3>
+                                Dona clásica
+                            </h3>
+
+                            <p>
+                                Suave y esponjosa,
+                                perfecta para combinar
+                                con tu cobertura favorita.
+                            </p>
+
+
+                            <div class="producto-abajo">
+
+                                <span class="precio">
+                                    Clásica
+                                </span>
+
+                                <span class="etiqueta">
+                                    Dona
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- DONA DEL BOSQUE -->
+
+                    <article class="producto">
+
+                        <div class="producto-img">
+
+                            <img
+                                src="imagenes/dona5.jpg"
+                                alt="Dona del Bosque"
+                            >
+
+                            <div class="favorito">
+                                ♡
+                            </div>
+
+                        </div>
+
+
+                        <div class="producto-info">
+
+                            <h3>
+                                Dona del Bosque
+                            </h3>
+
+                            <p>
+                                Nuestra combinación
+                                especial de chocolate
+                                y toppings.
+                            </p>
+
+
+                            <div class="producto-abajo">
+
+                                <span class="precio">
+                                    Especial
+                                </span>
+
+                                <span class="etiqueta">
+                                    Favorita
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- DONA ESPECIAL -->
+
+                    <article class="producto">
+
+                        <div class="producto-img">
+
+                            <img
+                                src="imagenes/especiales.jpg"
+                                alt="Dona especial"
+                            >
+
+                            <div class="favorito">
+                                ♡
+                            </div>
+
+                        </div>
+
+
+                        <div class="producto-info">
+
+                            <h3>
+                                Dona sorpresa
+                            </h3>
+
+                            <p>
+                                Una combinación dulce
+                                para quienes quieren
+                                probar algo diferente.
+                            </p>
+
+
+                            <div class="producto-abajo">
+
+                                <span class="precio">
+                                    Especial
+                                </span>
+
+                                <span class="etiqueta">
+                                    Nueva
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- DONA PERSONALIZADA -->
+
+                    <article class="producto">
+
+                        <div class="producto-img">
+
+                            <img
+                                src="imagenes/dona7.jpg"
+                                alt="Dona personalizada"
+                            >
+
+                            <div class="favorito">
+                                ♡
+                            </div>
+
+                        </div>
+
+
+                        <div class="producto-info">
+
+                            <h3>
+                                Dona personalizada
+                            </h3>
+
+                            <p>
+                                Escoge tu chocolate y
+                                agrega el topping que
+                                más te guste.
+                            </p>
+
+
+                            <div class="producto-abajo">
+
+                                <span class="precio">
+                                    A tu gusto
+                                </span>
+
+                                <span class="etiqueta">
+                                    Personaliza
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- ESPACIO -->
+
+                <div class="separador"></div>
+
+
+
+                <!-- =====================================
+                     CHOCOLATES
+                ====================================== -->
+
+                <div id="chocolates"></div>
+
+
+                <div class="encabezado">
+
+                    <small>
+                        COBERTURAS
+                    </small>
+
+                    <h2>
+                        El chocolate que más te guste 🍫
+                    </h2>
+
+                    <p>
+                        Elige entre nuestros tres
+                        deliciosos sabores.
+                    </p>
+
+                </div>
+
+
+                <div class="productos">
+
+
+                    <!-- ROSA -->
+
+                    <article class="producto">
+
+                        <div class="producto-img">
+
+                            <img
+                                src="imagenes/cholate rosa.jpg"
+                                alt="Chocolate rosado pastel"
+                            >
+
+                        </div>
+
+
+                        <div class="producto-info">
+
+                            <h3>
+                                Chocolate rosado pastel
+                            </h3>
+
+                            <p>
+                                Dulce, delicado y con
+                                un hermoso color pastel.
+                            </p>
+
+
+                            <div class="producto-abajo">
+
+                                <span class="precio">
+                                    Rosado
+                                </span>
+
+                                <span class="etiqueta">
+                                    Dulce
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- BLANCO -->
+
+                    <article class="producto">
+
+                        <div class="producto-img">
+
+                            <img
+                                src="imagenes/chocolate blanco.jpg"
+                                alt="Chocolate blanco"
+                            >
+
+                        </div>
+
+
+                        <div class="producto-info">
+
+                            <h3>
+                                Chocolate blanco
+                            </h3>
+
+                            <p>
+                                Cremoso, suave y perfecto
+                                para una dona delicada.
+                            </p>
+
+
+                            <div class="producto-abajo">
+
+                                <span class="precio">
+                                    Blanco
+                                </span>
+
+                                <span class="etiqueta">
+                                    Cremoso
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- OSCURO -->
+
+                    <article class="producto">
+
+                        <div class="producto-img">
+
+                            <img
+                                src="imagenes/chocolate oscuro.jpg"
+                                alt="Chocolate oscuro"
+                            >
+
+                        </div>
+
+
+                        <div class="producto-info">
+
+                            <h3>
+                                Chocolate oscuro
+                            </h3>
+
+                            <p>
+                                Intenso y delicioso para
+                                los amantes del chocolate.
+                            </p>
+
+
+                            <div class="producto-abajo">
+
+                                <span class="precio">
+                                    Oscuro
+                                </span>
+
+                                <span class="etiqueta">
+                                    Intenso
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+
+                <!-- ESPACIO -->
+
+                <div class="separador"></div>
+
+
+
+                <!-- =====================================
+                     TOPPINGS
+                ====================================== -->
+
+                <div id="toppings"></div>
+
+
+                <div class="encabezado">
+
+                    <small>
+                        EL TOQUE FINAL
+                    </small>
+
+                    <h2>
+                        Agrega tu topping favorito ✨
+                    </h2>
+
+                    <p>
+                        Dale a tu dona el toque final.
+                    </p>
+
+                </div>
+
+
+                <div class="productos">
+
+
+                    <!-- CHISPITAS -->
+
+                    <article class="producto">
+
+                        <div class="producto-img">
+
+                            <img
+                                src="imagenes/chispitas.jpg"
+                                alt="Chispitas"
+                            >
+
+                        </div>
+
+
+                        <div class="producto-info">
+
+                            <h3>
+                                Chispitas
+                            </h3>
+
+                            <p>
+                                Un toque divertido,
+                                colorido y delicioso.
+                            </p>
+
+
+                            <div class="producto-abajo">
+
+                                <span class="precio">
+                                    Chispitas
+                                </span>
+
+                                <span class="etiqueta">
+                                    ✨
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- MANÍ -->
+
+                    <article class="producto">
+
+                        <div class="producto-img">
+
+                            <img
+                                src="imagenes/mani.jpg"
+                                alt="Maní"
+                            >
+
+                        </div>
+
+
+                        <div class="producto-info">
+
+                            <h3>
+                                Maní
+                            </h3>
+
+                            <p>
+                                Crujiente y delicioso
+                                para acompañar el chocolate.
+                            </p>
+
+
+                            <div class="producto-abajo">
+
+                                <span class="precio">
+                                    Maní
+                                </span>
+
+                                <span class="etiqueta">
+                                    Crujiente
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- COCO -->
+
+                    <article class="producto">
+
+                        <div class="producto-img">
+
+                            <img
+                                src="imagenes/coco.jpg"
+                                alt="Coco"
+                            >
+
+                        </div>
+
+
+                        <div class="producto-info">
+
+                            <h3>
+                                Coco
+                            </h3>
+
+                            <p>
+                                Un toque suave y especial
+                                para tu dona.
+                            </p>
+
+
+                            <div class="producto-abajo">
+
+                                <span class="precio">
+                                    Coco
+                                </span>
+
+                                <span class="etiqueta">
+                                    Tropical
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             PROPUESTA
+        ========================================== -->
+
+        <section class="propuesta">
+
+            <div class="contenedor propuesta-grid">
+
+
+                <div class="propuesta-imagen">
+
+                    <img
+                        src="imagenes/dona8.jpg"
+                        alt="Donas del Bosque"
+                    >
+
+                </div>
+
+
+                <div class="propuesta-texto">
+
+                    <div class="encabezado">
+
+                        <small>
+                            NUESTRA PROPUESTA
+                        </small>
+
+                        <h2>
+                            Más que una dona,
+                            una experiencia. 🌿
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+
+                        En Donas del Bosque queremos
+                        transformar una dona tradicional
+                        en algo creativo, bonito y
+                        delicioso.
+
+                    </p>
+
+
+                    <p>
+
+                        Puedes combinar diferentes
+                        chocolates con nuestros toppings
+                        para crear una dona a tu gusto.
+
+                    </p>
+
+
+                    <div class="promesas">
+
+
+                        <div class="promesa">
+
+                            <strong>
+                                🍩 Donas
+                            </strong>
+
+                            <span>
+                                Suaves y deliciosas
+                            </span>
+
+                        </div>
+
+
+                        <div class="promesa">
+
+                            <strong>
+                                🍫 Chocolates
+                            </strong>
+
+                            <span>
+                                Tres sabores
+                            </span>
+
+                        </div>
+
+
+                        <div class="promesa">
+
+                            <strong>
+                                ✨ Toppings
+                            </strong>
+
+                            <span>
+                                Tres opciones
+                            </span>
+
+                        </div>
+
+
+                        <div class="promesa">
+
+                            <strong>
+                                💗 Creatividad
+                            </strong>
+
+                            <span>
+                                Hecho con dedicación
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             NOSOTROS
+        ========================================== -->
+
+        <section id="nosotros">
+
+            <div class="contenedor">
+
+
+                <div class="encabezado encabezado-centro">
+
+                    <small>
+                        CONÓCENOS
+                    </small>
+
+                    <h2>
+                        La historia detrás
+                        del bosque 🌿
+                    </h2>
+
+                    <p>
+                        Conoce más sobre nuestro
+                        emprendimiento.
+                    </p>
+
+                </div>
+
+
+
+                <div class="nosotros-grid">
+
+
+                    <article class="nosotros-card">
+
+                        <div class="icono">
+                            👩‍🍳
+                        </div>
+
+                        <h3>
+                            ¿Quiénes somos?
+                        </h3>
+
+                        <p>
+
+                            Somos un emprendimiento
+                            dedicado a crear donas
+                            cubiertas con deliciosos
+                            chocolates y toppings.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="nosotros-card">
+
+                        <div class="icono">
+                            🌱
+                        </div>
+
+                        <h3>
+                            ¿Cómo nacieron?
+                        </h3>
+
+                        <p>
+
+                            Donas del Bosque nació
+                            de la idea de darle una
+                            presentación diferente,
+                            creativa y especial a
+                            las donas.
+
+                        </p>
+
+                    </article>
+
+
+
+                    <article class="nosotros-card">
+
+                        <div class="icono">
+                            💗
+                        </div>
+
+                        <h3>
+                            Nuestra misión
+                        </h3>
+
+                        <p>
+
+                            Crear productos deliciosos
+                            y llamativos que hagan de
+                            cada momento una experiencia
+                            especial.
+
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             GALERÍA
+        ========================================== -->
+
+        <section id="galeria">
+
+            <div class="contenedor">
+
+
+                <div class="encabezado encabezado-centro">
+
+                    <small>
+                        GALERÍA
+                    </small>
+
+                    <h2>
+                        Así se ve nuestro bosque 🍩
+                    </h2>
+
+                    <p>
+                        Mira algunas de nuestras
+                        deliciosas creaciones.
+                    </p>
+
+                </div>
+
+
+
+                <div class="galeria">
+
+
+                    <div class="galeria-item galeria-grande">
+
+                        <img
+                            src="imagenes/principal.jpg"
+                            alt="Donas del Bosque"
+                        >
+
+                    </div>
+
+
+                    <div class="galeria-item">
+
+                        <img
+                            src="imagenes/dona clasica.jpg"
+                            alt="Dona clásica"
+                        >
+
+                    </div>
+
+
+                    <div class="galeria-item">
+
+                        <img
+                            src="imagenes/dona5.jpg"
+                            alt="Dona del Bosque"
+                        >
+
+                    </div>
+
+
+                    <div class="galeria-item">
+
+                        <img
+                            src="imagenes/dona7.jpg"
+                            alt="Dona con chocolate"
+                        >
+
+                    </div>
+
+
+                    <div class="galeria-item">
+
+                        <img
+                            src="imagenes/dona8.jpg"
+                            alt="Dona con toppings"
+                        >
+
+                    </div>
+
+
+                    <div class="galeria-item">
+
+                        <img
+                            src="imagenes/especiales.jpg"
+                            alt="Donas especiales"
+                        >
+
+                    </div>
+
+
+                    <div class="galeria-item">
+
+                        <img
+                            src="imagenes/cholate rosa.jpg"
+                            alt="Chocolate rosado pastel"
+                        >
+
+                    </div>
+
+
+                    <div class="galeria-item">
+
+                        <img
+                            src="imagenes/chocolate blanco.jpg"
+                            alt="Chocolate blanco"
+                        >
+
+                    </div>
+
+
+                    <div class="galeria-item">
+
+                        <img
+                            src="imagenes/chocolate oscuro.jpg"
+                            alt="Chocolate oscuro"
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BANNER -->
+
+                <div class="pedido-banner">
+
+
+                    <div>
+
+                        <h2>
+                            ¿Listo para probarlas? 🍩
+                        </h2>
+
+                        <p>
+                            Elige tu chocolate,
+                            tu topping y crea tu
+                            propia Dona del Bosque.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="#contacto"
+                        class="boton boton-blanco"
+                    >
+                        Quiero hacer un pedido
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             CONTACTO
+        ========================================== -->
+
+        <section id="contacto">
+
+            <div class="contenedor">
+
+
+                <div class="encabezado encabezado-centro">
+
+                    <small>
+                        CONTÁCTANOS
+                    </small>
+
+                    <h2>
+                        ¡Hablemos de donas! 💗
+                    </h2>
+
+                    <p>
+                        Estamos listos para recibir
+                        tu pedido.
+                    </p>
+
+                </div>
+
+
+
+                <div class="contacto-grid">
+
+
+                    <!-- WHATSAPP -->
+
+                    <div class="contacto-card">
+
+                        <div class="contacto-icono">
+                            💬
+                        </div>
+
+                        <h3>
+                            WhatsApp
+                        </h3>
+
+                        <p>
+                            Escríbenos para consultar
+                            disponibilidad y hacer
+                            tu pedido.
+                        </p>
+
+
+                        <!--
+                        IMPORTANTE:
+                        CAMBIA LAS X POR TU NÚMERO.
+
+                        Ejemplo:
+                        573001234567
+                        -->
+
+                        <a
+                            href="https://wa.me/573214231388"
+                            target="_blank"
+                            class="contacto-boton"
+                        >
+                            Escribir por WhatsApp
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- INSTAGRAM -->
+
+                    <div class="contacto-card">
+
+                        <div class="contacto-icono">
+                            📸
+                        </div>
+
+                        <h3>
+                            Instagram
+                        </h3>
+
+                        <p>
+                            Síguenos y descubre
+                            nuestras nuevas donas
+                            y publicaciones.
+                        </p>
+
+
+                        <!--
+                        CAMBIA EL ENLACE POR
+                        EL INSTAGRAM DE TU NEGOCIO.
+                        -->
+
+                        <a
+                            href="https://www.instagram.com/donas.delbosque?igsi=MTZjanl5MXBlNnhsag=="
+                            target="_blank"
+                            class="contacto-boton"
+                        >
+                            Ver Instagram
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="contenedor">
+
+
+            <div class="footer-logo">
+
+                🍩 Donas
+                <span>
+                    del Bosque
+                </span>
+
+            </div>
+
+
+            <div class="footer-linea"></div>
+
+
+            <p>
+                Donas + chocolate + toppings
+                = momentos deliciosos. 🌿💗
+            </p>
+
+
+            <p style="margin-top: 10px;">
+
+                © 2026 Donas del Bosque
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
